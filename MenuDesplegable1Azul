@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilos generales del cuerpo */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos de la barra de navegación */
+        .navbar {
+            background: linear-gradient(135deg, #87CEFA, #B0E0E6); /* Fondo con degradado azul claro */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada para efecto 3D */
+            padding: 10px 0; /* Espaciado vertical */
+        }
+
+        /* Estilos del menú principal */
+        .menu {
+            list-style: none; /* Sin viñetas */
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center; /* Centrar el menú horizontalmente */
+        }
+
+        /* Estilos de los elementos del menú */
+        .menu-item {
+            position: relative; /* Necesario para la posición absoluta del submenú */
+        }
+
+        /* Espaciado entre elementos del menú principal */
+        .menu > .menu-item {
+            margin: 0 20px;
+        }
+
+        /* Estilos de los enlaces del menú principal */
+        .menu a {
+            color: white; /* Color del texto */
+            text-decoration: none; /* Sin subrayado */
+            padding: 10px 20px; /* Espaciado interno */
+            display: block;
+            transition: background 0.3s, transform 0.3s; /* Transiciones para los efectos de hover */
+            background: linear-gradient(135deg, #00c6ff 0%, #0072ff 100%); /* Fondo con degradado azul */
+            border-radius: 5px; /* Bordes redondeados */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto 3D */
+            text-align: center; /* Centrar texto */
+        }
+
+        /* Efecto hover para los enlaces del menú principal */
+        .menu a:hover {
+            background: linear-gradient(135deg, #0072ff 0%, #00c6ff 100%); /* Cambio de degradado */
+            transform: translateY(-2px); /* Movimiento hacia arriba */
+        }
+
+        /* Estilos del submenú */
+        .submenu {
+            list-style: none; /* Sin viñetas */
+            position: absolute;
+            top: 100%; /* Posicionarse justo debajo del elemento del menú principal */
+            left: 0;
+            margin-top: -5px; /* Asegurarse de que no haya espacio vacío entre el menú principal y el submenú */
+            padding: 0;
+            background: rgba(105, 105, 105, 0.7); /* Fondo plomo más transparente */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra */
+            border-radius: 5px; /* Bordes redondeados */
+            display: none; /* Ocultar submenú por defecto */
+        }
+
+        /* Bordes inferiores de los elementos del submenú */
+        .submenu li {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* Quitar borde inferior del último elemento del submenú */
+        .submenu li:last-child {
+            border-bottom: none;
+        }
+
+        /* Estilos de los enlaces del submenú */
+        .submenu a {
+            color: #ffffff; /* Color del texto */
+            padding: 10px 20px; /* Espaciado interno */
+            display: block;
+            white-space: nowrap; /* Evitar que el texto se envuelva */
+        }
+
+        /* Efecto hover para los enlaces del submenú */
+        .submenu a:hover {
+            background: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
+        }
+
+        /* Mostrar submenú al hacer hover sobre el elemento del menú principal */
+        .menu-item:hover .submenu {
+            display: block;
+        }
+
+        /* Asegurar que el submenú no se oculte al mover el mouse hacia él */
+        .submenu:hover {
+            display: block; /* Mostrar submenú al hacer hover sobre el submenú */
+        }
+
+        /* Asegurar que el submenú se superponga con el menú principal */
+        .menu-item .submenu {
+            margin-top: -5px; /* Ajustar el margen superior para evitar espacio vacío */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="menu">
+            <!-- Elementos del menú principal -->
+            <li class="menu-item"><a href="#">Item 1</a>
+                <!-- Submenú -->
+                <ul class="submenu">
+                    <li><a href="#">Opción 1.1</a></li>
+                    <li><a href="#">Opción 1.2</a></li>
+                    <li><a href="#">Opción 1.3</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#">Item 2</a>
+                <!-- Submenú -->
+                <ul class="submenu">
+                    <li><a href="#">Opción 2.1</a></li>
+                    <li><a href="#">Opción 2.2</a></li>
+                    <li><a href="#">Opción 2.3</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#">Item 3</a>
+                <!-- Submenú -->
+                <ul class="submenu">
+                    <li><a href="#">Opción 3.1</a></li>
+                    <li><a href="#">Opción 3.2</a></li>
+                    <li><a href="#">Opción 3.3</a></li>
+                </ul>
+            </li>
+            <li class="menu-item"><a href="#">Item 4</a>
+                <!-- Submenú -->
+                <ul class="submenu">
+                    <li><a href="#">Opción 4.1</a></li>
+                    <li><a href="#">Opción 4.2</a></li>
+                    <li><a href="#">Opción 4.3</a></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+</body>
+</html>
